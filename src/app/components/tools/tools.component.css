@@ -1,0 +1,9 @@
+.deletePadding {
+    padding: 0px
+}
+
+.continuar {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

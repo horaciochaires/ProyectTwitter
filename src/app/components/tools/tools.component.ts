@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OthersService } from '../../service/others/others.service';
 
 @Component({
   selector: 'app-tools',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tools.component.css']
 })
 export class ToolsComponent implements OnInit {
+friends:any[];
+  constructor(private friendService: OthersService) { }
 
-  constructor() { }
-
-  ngOnInit() {
+ngOnInit() {
+    this.friends= this.friendService.getfriends();
   }
+  
 
 }

@@ -1,60 +1,66 @@
-<nav class="navbar navbar-expand-lg navbar-light  global-nav-inner">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-light  global-nav-inner" style="padding-left: 105px;
+padding-right: 105px;
+">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarColor02">
-    <ul class="navbar-nav mr-auto ">
-        <li class="nav-item">
-            <a class="nav-link fas fa-home" href="#"> Home <span class="sr-only">(current)</span></a>
-          </li>
-      <li class="nav-item">
-        <a class="nav-link fas fa-bolt" href="#"> Momments <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link fas fa-bell" href="#"> Notification</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link fas fa-envelope" href="#"> Messages</a>
-      </li>
-      <li>
-          <i class="fab fa-twitter imageIconTwitter "></i>
-      </li>
-      </ul>
-      <form class="form-inline">
-      <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search Twitter          🔎" aria-label="Search">
-      <img src="https://avatars0.githubusercontent.com/u/26940519?s=460&v=4" style="width:35px" alt="Avatar">
-        <button type="button" class="btn btn-primary js-global-new-tweet js-tooltip EdgeButton EdgeButton--primary js-dynamic-tooltip right" (click)="open(content)">
+    <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav mr-auto ">
+            <li class="nav-item">
+                <a class="nav-link fas fa-home" href="#"> Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link fas fa-bolt" href="#"> Momments <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link fas fa-bell" href="#"> Notification</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link fas fa-envelope" href="#"> Messages</a>
+            </li>
+            <li>
+                <i class="fab fa-twitter imageIconTwitter "></i>
+            </li>
+        </ul>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search Twitter          🔎" aria-label="Search">
+            <img src="https://avatars0.githubusercontent.com/u/26940519?s=460&v=4" style="width:35px" alt="Avatar">
+            <button type="button" class="btn btn-primary js-global-new-tweet js-tooltip EdgeButton EdgeButton--primary js-dynamic-tooltip right" (click)="open(content)">
             Tweet
           </button>
-    </form>
-  </div>
+        </form>
+    </div>
 </nav>
 
 <ng-template #content let-c="close" let-d="dismiss">
     <div class="modal-header">
-      <h4 class="modal-title" id="modal-basic-title">Compose new Tweet</h4>
-      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <h4 class="modal-title" id="modal-basic-title">Compose new Tweet</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
         <span aria-hidden="true">&times;</span>
       </button>
-      <div aria-labelledby="Tweetstorm-tweet-box-0-label Tweetstorm-tweet-box-0-text-label" name="tweet" class="tweet-box rich-editor is-showPlaceholder" contenteditable="true" spellcheck="true" role="textbox" aria-multiline="true" data-placeholder-default="What’s happening?" data-placeholder-poll-composer-on="Ask a question..." data-placeholder-add-another-tweet="Add another Tweet" dir="ltr" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-dropdown-6"><div><br></div></div>
+        <div aria-labelledby="Tweetstorm-tweet-box-0-label Tweetstorm-tweet-box-0-text-label" name="tweet" class="tweet-box rich-editor is-showPlaceholder" contenteditable="true" spellcheck="true" role="textbox" aria-multiline="true" data-placeholder-default="What’s happening?"
+            data-placeholder-poll-composer-on="Ask a question..." data-placeholder-add-another-tweet="Add another Tweet" dir="ltr" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-dropdown-6">
+            <div><br></div>
+        </div>
     </div>
     <div class="modal-body">
-      <form>
-          <div class="row">
-              <img src="https://avatars0.githubusercontent.com/u/26940519?s=460&v=4" class="imageRight" style="width:45px" height="45px" hei alt="Avatar">
-              <div class="col-md-9" >
-              <input height="100px" type="text"  class="form-control" placeholder="What's happening?                                                              😉" name="dp" ngbDatepicker #dp="ngbDatepicker">
-              </div>
-             
-          </div>
-        
-      </form>
+        <form>
+            <div class="row">
+                <img src="https://avatars0.githubusercontent.com/u/26940519?s=460&v=4" class="imageRight" style="width:45px" height="45px" hei alt="Avatar">
+                <div class="col-md-9">
+                    <input height="100px" type="text" class="form-control" placeholder="What's happening?                                                              😉" name="dp" ngbDatepicker #dp="ngbDatepicker">
+                </div>
+
+            </div>
+
+        </form>
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+        <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
     </div>
-    <div aria-labelledby="Tweetstorm-tweet-box-0-label Tweetstorm-tweet-box-0-text-label" name="tweet" class="tweet-box rich-editor is-showPlaceholder" contenteditable="true" spellcheck="true" role="textbox" aria-multiline="true" data-placeholder-default="What’s happening?" data-placeholder-poll-composer-on="Ask a question..." data-placeholder-add-another-tweet="Add another Tweet" dir="ltr" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-dropdown-6"><div><br></div></div>
-  </ng-template>
-
-
+    <div aria-labelledby="Tweetstorm-tweet-box-0-label Tweetstorm-tweet-box-0-text-label" name="tweet" class="tweet-box rich-editor is-showPlaceholder" contenteditable="true" spellcheck="true" role="textbox" aria-multiline="true" data-placeholder-default="What’s happening?"
+        data-placeholder-poll-composer-on="Ask a question..." data-placeholder-add-another-tweet="Add another Tweet" dir="ltr" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-dropdown-6">
+        <div><br></div>
+    </div>
+</ng-template>

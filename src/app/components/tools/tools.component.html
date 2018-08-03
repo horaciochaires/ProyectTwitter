@@ -1,3 +1,57 @@
-<p>
-  tools works!
-</p>
+<div class="container" style="background:white">
+    <div class="col-13">
+        <h4>A quien Segir</h4>
+    </div>
+    <div class="container">
+        <div class="row" *ngFor="let friend of friends">
+            <div class=" col-12 " style="padding-top:0px ">
+                <div class="row ">
+                    <!-- aqui va la imagen de usuario -->
+                    <div class="col-4 " style="background:white; padding:3px ">
+
+                        <div class="input-group-prepend ">
+                            <img src={{friend.img}} class="rounded-circle " alt="Cinque Terre " width="70 " height="69 ">
+                        </div>
+                    </div>
+                    <!-- aqui va el contenido del twit -->
+                    <div class="col-8 " style="background: white;padding-right: 0px; ">
+                        <div class="row ">
+                            <div class="col-12 ">
+                                <div class="row ">
+
+                                    <div class="col-6 ">
+                                        <div class="row ">
+                                            <a class="col-12 textUser deletePadding continuar ">{{friend.nombre}}</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-4 ">
+                                        <div class="row ">
+                                            <a class="col-12 textUser deletePadding continuar ">{{friend.username}}</a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class=" col-12 deletePadding ">
+                                <button type="button " class="btn btn-outline-primary btn-sm ">Segir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container " style="background: white; margin-top: 12px; ">
+    <div class="row ">
+        <div class="col-12 ">
+            <div class="col-12 " style=" color: #657786;font-size:12px ">
+                © 2018 TwitterSobre nosotrosCentro de AyudaCondicionesPolítica de privacidad Cookies Información sobre anuncios MarcaBlog Estado Aplicaciones EmpleosMarketing Empresas Desarrolladores
+            </div>
+        </div>
+    </div>
+
+
+</div>
