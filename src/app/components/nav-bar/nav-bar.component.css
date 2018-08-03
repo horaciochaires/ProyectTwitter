@@ -1,0 +1,68 @@
+img {
+    border-radius: 50%;
+}
+.EdgeButton--primary, .EdgeButton--primary:focus {
+    background-color: #4AB3F4;
+    border-color: transparent;
+}
+.EdgeButton--primary {
+    background-color: #1da1f2;
+    border: 1px solid #1da1f2;
+    color: #fff;
+}
+.EdgeButton, .EdgeButton:visited {
+    border-radius: 100px;
+    box-shadow: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(77, 77, 77, 0.836);
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: rgb(25, 118, 218) !important;
+}
+.right{
+    margin-left: 10px;
+}
+.imageIconTwitter{
+    margin-left:200px;
+        color: #1da1f2;
+        font-size: 21px;
+}
+.search-input {
+    background-color: #f5f8fa;
+    border-radius: 21px;
+    border: 1px solid #e6ecf0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #14171a;
+    display: block;
+    font-size: 12px;
+    height: 32px;
+    line-height: 16px;
+    padding: 8px 32px 8px 12px;
+    transition: all .2s ease-in-out;
+    
+}
+.global-nav-inner{
+    background: rgb(255, 255, 255);
+    height: 46px;
+}
+.imageRight{
+    margin-left:20px;
+}
+
+
+
+
+
+

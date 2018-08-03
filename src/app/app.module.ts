@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 // Components
@@ -30,8 +31,7 @@ import { OthersService } from './service/others/others.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-  ],
+    AppRoutingModule,NgbModule.forRoot()  ],
   providers: [TimeLineService,OthersService],
   bootstrap: [AppComponent]
 })
