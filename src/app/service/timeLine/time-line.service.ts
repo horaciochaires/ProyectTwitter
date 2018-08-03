@@ -26,8 +26,6 @@ public postMensajes(mensaje:any){
 
 
   public getTwetts():any[]{
-
-    
-       return this.Twetts; 
+   return this.Twetts.reverse(); 
    }
 }

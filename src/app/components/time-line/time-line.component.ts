@@ -13,7 +13,7 @@ export class TimeLineComponent implements OnInit {
   ngOnInit() {
     
     this.Twetts=this.MesagesDatasService.getTwetts().reverse();
-    this.Twetts.reverse();
+    console.log(this.Twetts);
   }
 
  

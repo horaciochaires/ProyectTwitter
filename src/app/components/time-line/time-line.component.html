@@ -17,7 +17,7 @@
         </div>
     </div>
     <!-- este es el twit -->
-    <div class="row"*ngFor="let Twett of Twetts">
+    <div class="row" *ngFor="let Twett of Twetts.slice().reverse() let i = index;">
 
         <div class="col-12 " style="padding-top:9px">
             <div class="row">
