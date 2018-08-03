@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TimeLineService} from '../../service/timeLine/time-line.service';
 
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 @Component({
@@ -8,8 +9,16 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 })
 export class NavBarComponent {
   closeResult: string;
+  Twetts=[];
+  mensaje:string;
+  usuarioSeleccionado = "Default";
+  usuarioReceptor: any;
 
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal,private MesagesDatasService: TimeLineService) {}
+
+  ngOnInit() {
+    this.Twetts=this.MesagesDatasService.getTwetts();
+  }
 
   open(content) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
@@ -27,6 +36,16 @@ export class NavBarComponent {
     } else {
       return  `with: ${reason}`;
     }
-  }}
+  }
+
+  public  postMensaje(){
+    this.usuarioReceptor= localStorage.getItem("IdReceptor");
+    this.MesagesDatasService.postMensajes(this.mensaje);
+    this.mensaje='';
+   
+  }
+
+
+}
 
 

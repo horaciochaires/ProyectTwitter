@@ -30,7 +30,7 @@ import { OthersService } from './service/others/others.service';
 
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,FormsModule,
     AppRoutingModule,NgbModule.forRoot()  ],
   providers: [TimeLineService,OthersService],
   bootstrap: [AppComponent]

@@ -49,7 +49,7 @@ padding-right: 105px;
             <div class="row">
                 <img src="https://avatars0.githubusercontent.com/u/26940519?s=460&v=4" class="imageRight" style="width:45px" height="45px" hei alt="Avatar">
                 <div class="col-md-9">
-                    <input height="100px" type="text" class="form-control" placeholder="What's happening?                                                              😉" name="dp" ngbDatepicker #dp="ngbDatepicker">
+                    <input [(ngModel)]="mensaje" (keyup.enter)="postMensaje()" height="100px" type="text" class="form-control" placeholder="What's happening?                                                              😉" name="dp" ngbDatepicker #dp="ngbDatepicker">
                 </div>
 
             </div>
@@ -57,7 +57,7 @@ padding-right: 105px;
         </form>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+        <button type="button" class="btn btn-outline-dark" (click)="postMensaje()">Save</button>
     </div>
     <div aria-labelledby="Tweetstorm-tweet-box-0-label Tweetstorm-tweet-box-0-text-label" name="tweet" class="tweet-box rich-editor is-showPlaceholder" contenteditable="true" spellcheck="true" role="textbox" aria-multiline="true" data-placeholder-default="What’s happening?"
         data-placeholder-poll-composer-on="Ask a question..." data-placeholder-add-another-tweet="Add another Tweet" dir="ltr" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-dropdown-6">
