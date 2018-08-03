@@ -44,7 +44,7 @@
           <div class="row">
               <img src="https://avatars0.githubusercontent.com/u/26940519?s=460&v=4" class="imageRight" style="width:45px" height="45px" hei alt="Avatar">
               <div class="col-md-9" >
-              <input height="100px" type="text"  class="form-control" placeholder="What's happening?                                                              😉" name="dp" ngbDatepicker #dp="ngbDatepicker">
+              <input [(ngModel)]="mensaje" (keyup.enter)="postMensaje()" height="100px" type="text"  class="form-control" placeholder="What's happening?                                                              😉" name="dp" ngbDatepicker #dp="ngbDatepicker">
               </div>
              
           </div>
