@@ -9,12 +9,16 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 })
 export class NavBarComponent {
   closeResult: string;
-  heroes = [];
+  Twetts=[];
   mensaje:string;
   usuarioSeleccionado = "Default";
   usuarioReceptor: any;
 
   constructor(private modalService: NgbModal,private MesagesDatasService: TimeLineService) {}
+
+  ngOnInit() {
+    this.Twetts=this.MesagesDatasService.getTwetts();
+  }
 
   open(content) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
@@ -40,6 +44,8 @@ export class NavBarComponent {
     this.mensaje='';
    
   }
+
+
 }
 
 
