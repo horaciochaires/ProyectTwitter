@@ -1,6 +1,6 @@
 <div class="container">
     <!-- este es el input  -->
-    <div class="row">
+    <div class="row" >
         <div class="col-12 containerMensaje">
             <div class="input-group mb-3 ">
                 <div class="input-group-prepend">
@@ -17,13 +17,13 @@
         </div>
     </div>
     <!-- este es el twit -->
-    <div class="row">
+    <div class="row"*ngFor="let Twett of Twetts">
         <div class="col-12 " style="padding-top:9px">
             <div class="row">
                 <!-- aqui va la imagen de usuario -->
                 <div class="col-2" style="background:white; padding-right: 0px;">
                     <div class="input-group-prepend">
-                        <img src="https://avatars0.githubusercontent.com/u/26940519?s=460&v=4" class="rounded-circle" alt="Cinque Terre" width="70" height="69">
+                        <img src={{Twett.img}} class="rounded-circle" alt="Cinque Terre" width="70" height="69">
                     </div>
                 </div>
                 <!-- aqui va el contenido del twit -->
@@ -34,7 +34,7 @@
 
                                 <div class="col-10 ">
                                     <div class="row ">
-                                        <a class="col-4 textUser deletePadding deleteMagin">HoracioChairez</a>
+                                        <a class="col-4 textUser deletePadding deleteMagin">{{Twett.nombre}}</a>
                                         <p class="col-3 textNick deletePadding deleteMagin">@Chairezard</p>
                                         <p class="col-2 textTime deletePadding deleteMagin">1 min</p>
                                     </div>
@@ -45,7 +45,7 @@
                             </div>
                         </div>
                         <div class=" col-12 deletePadding">
-                            Este es un Texto harcodeado el cual solo es un template Este es un Texto harcodeado el cual solo es un template
+                            {{Twett.Contenido}}
                         </div>
                         <div class="col-12 ">
                             <div class="row">
