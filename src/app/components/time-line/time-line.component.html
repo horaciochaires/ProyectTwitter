@@ -7,7 +7,7 @@
                     <img src="https://avatars0.githubusercontent.com/u/26940519?s=460&v=4" class="rounded-circle" alt="Cinque Terre" width="32" height="32">
                 </div>
                 <div class="col-10" style="padding-right:0px">
-                    <input style="height:36px;    border-right-width: 0px;
+                    <input [(ngModel)]="mensaje" (keyup.enter)="postMensaje()" style="height:36px;    border-right-width: 0px; 
                     border-radius: 0px;" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group-prepend" style="height:36px; ">
